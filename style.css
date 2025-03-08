@@ -1,4 +1,4 @@
- :root {
+:root {
     --pink-100: #fff5f7;
     --pink-500: #ed64a6;
     --pink-600: #d53f8c;
@@ -19,17 +19,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     min-height: 100vh;
     background: linear-gradient(to bottom, var(--pink-100), var(--purple-100));
-    overflow-x: hidden;  
-  display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-
+       overflow-x: hidden;  
 }
 
 .container {
     max-width: 1200px;
-    width: 100%; /* Ajuste para ocupar 100% da largura disponível */
     margin: 0 auto;
     padding: 3rem 1rem;
 }
@@ -64,13 +58,13 @@ h1 {
 
 .grid {
     display: grid;
-    gap: 3rem;
-    grid-template-columns: 1fr; /* Ajuste para 1 coluna em telas menores */
+    gap: 1rem;
 }
 
 .image-container {
     border-radius: 0.5rem;
     overflow: hidden;
+ 
     transition: transform 0.3s ease;
     height: 100%;
     width: 505px;
@@ -80,14 +74,19 @@ h1 {
     transform: translateY(-5px);
 }
 
+
+   
+
+
 img {
-    width: 100%; /* Ajustado para ocupar toda a largura do contêiner */
+    width: 73%;
     border-radius: 10px;
-    height: auto; /* Ajustado para manter a proporção da imagem */
+    height: 441px;
     object-fit: cover;
     display: block;
     transition: opacity 0.5s ease;
 }
+
 
 .content {
     text-align: center;
@@ -173,39 +172,21 @@ h2 {
     100% { transform: scale(1); }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     h1 {
-        font-size: 2rem; /* Tamanho reduzido no celular */
+        font-size: 3rem;
     }
-
+    
     .grid {
-        grid-template-columns: 1fr; /* Alinha os itens em uma coluna */
-        gap: 1.5rem; /* Menor espaçamento entre os itens */
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
     }
-
-    .image-container {
-        width: 100%; /* Ajusta a largura da imagem para 100% do contêiner */
-        height: auto; /* Ajusta a altura para manter a proporção */
-    }
-
-    img {
-        width: 100%; /* A imagem ocupa 100% da largura do contêiner */
-        height: auto; /* Mantém a proporção da imagem */
-    }
-
+    
     .content {
-        text-align: left; /* Alinha o texto à esquerda no celular */
+        text-align: left;
     }
-
+    
     .title {
-        justify-content: flex-start; /* Alinha os itens à esquerda */
-    }
-
-    .subtitle {
-        font-size: 1rem; /* Reduz o tamanho da fonte no celular */
-    }
-
-    .message {
-        font-size: 1rem; /* Reduz o tamanho da mensagem no celular */
+        justify-content: flex-start;
     }
 }
